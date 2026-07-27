@@ -1,0 +1,20 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6572E"/>
+      <stop offset="100%" stop-color="#B3230F"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="128" height="128" rx="28" fill="url(#bg2)"/>
+
+  <!-- glossy highlight -->
+  <ellipse cx="45" cy="30" rx="46" ry="20" fill="#FFFFFF" opacity="0.12"/>
+
+  <!-- J monogram -->
+  <text x="64" y="90" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="72" fill="#FFFFFF" text-anchor="middle">J</text>
+
+  <!-- coffee steam accent above the J -->
+  <path d="M50 24c-3 5 3 6 0 11" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M60 22c-3 5 3 6 0 11" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+</svg>
