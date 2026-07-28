@@ -1,38 +1,430 @@
+/* ============================================
+   Hero Section — Prabu G Portfolio
+   Matches dark-green hero design from screenshot
+   ============================================ */
 
-
-@media screen and (min-width: 380px) and (max-width: 768px) {
-  .nav_item {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .nav_item p {
-    margin-bottom: 5px;
-    font-size: 14px;
-  }
-
-  .postion {
+   .hero_back {
+    background: radial-gradient(ellipse at center 60%, #0f3d31 0%, #061a14 55%, #04100c 100%);
+    min-height: 100vh;
+    width: 100%;
+    padding: 25px 0 40px 0;
+    overflow: hidden;
     position: relative;
   }
-
+  
+  /* ---------- Navbar ---------- */
+  .hero_nav {
+    /* align-items: center; */
+    padding: 5px 0 5px 0;
+  }
+  
+  .hero_nav img.img-fluid {
+    max-height: 40px;
+    width: auto;
+  }
+  
+  .nav_item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+  }
+  
+  .nav_item a {
+    text-decoration: none;
+  }
+  
+  .nav_item p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    transition: color 0.2s ease;
+  }
+  
+  .nav_item a:hover p {
+    color: #2fd6ac;
+  }
+  
+  /* ---------- Main Heading ---------- */
+  .postion {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
   .postion #hero_heading {
-    font-size: 30px;
-    position: absolute;
-    top: -70px;
-    left: 0;
-    color: white;
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+    background: linear-gradient(180deg, #ffffff 0%, #9fb3ae 60%, #4d6a63 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #d7e4e0;
   }
-
-  .hero_name {
-    margin-top: 20px;
+  
+  /* ---------- Content Row ---------- */
+  .hero_next {
+    margin-top: 25px;
+    /* align-items: center; */
   }
-
+  
+  /* Left column — name / bio / button */
+  .hero_details {
+    padding-right: 20px;
+  }
+  
+  .hero_name h6 {
+    color: #2fd6ac;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .hero_name p {
+    color: #cfd8d5;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  
+  /* ---------- Button ---------- */
+  .pro_butn a {
+    display: inline-block;
+    background: linear-gradient(90deg, #2fd6ac 0%, #17b58d 100%);
+    color: #ffffff;
+    padding: 14px 34px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 18px rgba(47, 214, 172, 0.25);
+  }
+  
+  .pro_butn a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(47, 214, 172, 0.35);
+  }
+  
+  .pro_butn p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  
+  /* Center column — robot image */
+  .robo {
+    max-width: 100%;
+    width: 340px;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  }
+  
+  /* Right column — tagline */
   .hero_smtit {
-    margin-top: 20px;
+    text-align: left;
   }
-
+  
+  .hero_smtit p {
+    color: #cfd8d5;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  
+  .hero_smtit #heading {
+    font-size: 42px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.06);
+    margin: 0;
+    line-height: 1;
+  }
+  
   .hero_smtit h5 {
     font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: -18px;
   }
-}
-
+  
+  /* ============================================
+     MOBILE NAV TOGGLE / SLIDE-IN PANEL
+     (hidden on desktop, shown only below 992px)
+     ============================================ */
+  
+  .nav_right_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  /* Hamburger button */
+  .nav_toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+    position: relative;
+  }
+  
+  .nav_toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .nav_toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  
+  .nav_toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav_toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  /* Backdrop overlay */
+  .nav_overlay {
+    display: none;
+  }
+  
+  /* Slide-in panel (hidden by default / desktop) */
+  .nav_mobile_panel {
+    display: none;
+  }
+  
+  .nav_panel_close {
+    display: none;
+  }
+  
+  @media screen and (max-width: 991px) {
+    .nav_toggle {
+      display: flex;
+    }
+  
+    /* Backdrop */
+    .nav_overlay {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 1200;
+    }
+  
+    .nav_overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    /* Slide-in panel — right side */
+    .nav_mobile_panel {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 78%;
+      max-width: 300px;
+      background: linear-gradient(180deg, #0f3d31 0%, #061a14 100%);
+      box-shadow: -8px 0 30px rgba(0, 0, 0, 0.4);
+      transform: translateX(100%);
+      transition: transform 0.35s ease;
+      z-index: 1300;
+      padding: 70px 30px 30px;
+    }
+  
+    .nav_mobile_panel.open {
+      transform: translateX(0);
+    }
+  
+    .nav_panel_close {
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 32px;
+      line-height: 1;
+      cursor: pointer;
+    }
+  
+    .nav_item_mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+  
+    .nav_item_mobile a {
+      text-decoration: none;
+    }
+  
+    .nav_item_mobile p {
+      margin: 0;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  
+    .nav_item_mobile a:hover p {
+      color: #2fd6ac;
+    }
+  }
+  
+  
+  @media screen and (min-width: 769px) and (max-width: 991px) {
+    .postion #hero_heading {
+      font-size: 48px;
+    }
+  
+    .hero_next {
+      margin-top: 40px;
+    }
+  
+    .robo {
+      width: 260px;
+    }
+  
+    .hero_smtit #heading {
+      font-size: 32px;
+    }
+  
+    .hero_smtit h5 {
+      font-size: 22px;
+    }
+  }
+  
+  /* ============================================
+     MOBILE
+     ============================================ */
+  @media screen and (min-width: 380px) and (max-width: 768px) {
+  
+    .hero_back {
+      padding: 20px 0 40px 0;
+      overflow: hidden;
+    }
+  
+    .hero_nav {
+      padding-bottom: 10px;
+    }
+  
+    .hero_nav img.img-fluid {
+      max-height: 28px;
+    }
+    /* Heading */
+    .postion {
+      position: static;
+      margin-top: 30px;
+      text-align: center;
+    }
+  
+    .postion #hero_heading {
+      font-size: 30px;
+      position: static;
+      color: white;
+      text-align: center;
+      -webkit-text-fill-color: white;
+      background: none;
+    }
+  
+    /* Content row */
+    .hero_next {
+      margin-top: 30px;
+      text-align: center;
+    }
+  
+    .hero_details {
+      padding-right: 0;
+      text-align: center;
+    }
+  
+    .hero_name {
+      margin-top: 20px;
+    }
+  
+    .hero_name h6 {
+      font-size: 22px;
+    }
+  
+    .hero_name p {
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    .pro_butn {
+      display: flex;
+      justify-content: center;
+      margin-top: 5px;
+    }
+  
+    .robo {
+      width: 220px;
+      margin: 20px auto;
+    }
+  
+    .hero_smtit {
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .hero_smtit h5 {
+      font-size: 28px;
+    }
+  
+    .hero_smtit #heading {
+      font-size: 26px;
+    }
+  }
+  
+  /* ============================================
+     EXTRA SMALL PHONES
+     ============================================ */
+  @media screen and (max-width: 379px) {
+    .postion #hero_heading {
+      font-size: 22px;
+    }
+  
+    .hero_name h6 {
+      font-size: 20px;
+    }
+  
+    .hero_name p {
+      font-size: 13px;
+    }
+  
+    .robo {
+      width: 180px;
+    }
+  
+    .hero_smtit h5 {
+      font-size: 22px;
+    }
+  
+    .hero_smtit #heading {
+      font-size: 20px;
+    }
+  
+    .pro_butn a {
+      padding: 12px 26px;
+      font-size: 14px;
+    }
+  }
+  
