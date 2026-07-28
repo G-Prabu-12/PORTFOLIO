@@ -21,7 +21,7 @@ function Hero() {
         <nav className="row hero_nav" aria-label="Main navigation">
           <div className="col-md-3 col-4">
             <img
-              src="/images/logo.svg"
+              src="src/assets/images/logo.svg"
               className="img-fluid"
               alt="Prabhu logo"
             />
@@ -126,7 +126,7 @@ function Hero() {
           {/* Center: Robot Image */}
           <div className="col-lg-4 order-3 order-lg-2">
             <img
-              src="/images/robo.png"
+              src="src/assets/images/robo.png"
               className="img-fluid robo"
               alt="3D robot illustration"
             />

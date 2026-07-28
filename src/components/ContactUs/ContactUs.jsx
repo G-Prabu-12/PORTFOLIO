@@ -269,7 +269,7 @@ debugger;
                 <div className="col-lg-6">
                   <div className="con d-flex align-items-start justify-content-start">
                     <img
-                      src="public/images/add.svg"
+                      src="src/assets/images/add.svg"
                       alt=""
                       aria-hidden="true"
                     />
@@ -282,7 +282,7 @@ debugger;
                 <div className="col-lg-6">
                   <div className="con d-flex align-items-start justify-content-start">
                     <img
-                      src="public/images/mobile.svg"
+                      src="src/assets/images/mobile.svg"
                       alt=""
                       aria-hidden="true"
                     />
@@ -295,7 +295,7 @@ debugger;
                 <div className="col-lg-6">
                   <div className="con d-flex align-items-start justify-content-start">
                     <img
-                      src="public/images/avi.svg"
+                      src="src/assets/images/avi.svg"
                       alt=""
                       aria-hidden="true"
                     />
@@ -308,7 +308,7 @@ debugger;
                 <div className="col-lg-6">
                   <div className="con d-flex align-items-start justify-content-start">
                     <img
-                      src="public/images/email.svg"
+                      src="src/assets/images/email.svg"
                       alt=""
                       aria-hidden="true"
                     />
@@ -338,7 +338,7 @@ debugger;
                     onClick={() => trackClick("GitHub Icon Click")}
                   >
                     <img
-                      src="public/images/git.svg"
+                      src="src/assets/images/git.svg"
                       className="img-fluid"
                       alt="GitHub"
                     />
@@ -351,7 +351,7 @@ debugger;
                     onClick={() => trackClick("LinkedIn Icon Click")}
                   >
                     <img
-                      src="public/images/lin.svg"
+                      src="src/assets/images/lin.svg"
                       className="img-fluid"
                       alt="LinkedIn"
                     />
@@ -364,7 +364,7 @@ debugger;
                     onClick={() => trackClick("Behance Icon Click")}
                   >
                     <img
-                      src="public/images/lin1.svg"
+                      src="src/assets/images/lin1.svg"
                       className="img-fluid"
                       alt="Behance"
                     />
@@ -375,7 +375,7 @@ debugger;
                     onClick={() => trackClick("Phone Icon Click")}
                   >
                     <img
-                      src="public/images/wh.svg"
+                      src="src/assets/images/wh.svg"
                       className="img-fluid"
                       alt="Phone"
                     />

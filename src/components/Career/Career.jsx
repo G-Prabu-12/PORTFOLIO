@@ -17,7 +17,7 @@ function CareerPath() {
                     <div className="starimage sword-area">
                         <div className="sword-area__inner">
                             <img
-                                src="public/images/bu.png"
+                                src="src/assets/images/bu.png"
                                 className="img-fluid"
                                 alt=""
                                 aria-hidden="true"
